@@ -94,11 +94,39 @@
                             <outlet property="delegate" destination="wd7-nF-g8P" id="Veo-VJ-wJx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="X's Story by Kosiso" id="oiI-rz-3rC"/>
+                    <navigationItem key="navigationItem" title="X's Story by Kosiso" id="oiI-rz-3rC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zVQ-yk-mXB">
+                            <connections>
+                                <segue destination="jAY-l7-tG2" kind="show" id="roC-kl-Mw6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALR-Zz-jSl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2112.5581395348836" y="2.5751072961373391"/>
+        </scene>
+        <!--New Game-->
+        <scene sceneID="HQh-t7-P6o">
+            <objects>
+                <viewController id="jAY-l7-tG2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qeN-O4-ynI">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red_grid" translatesAutoresizingMaskIntoConstraints="NO" id="OpD-eN-LHT">
+                                <rect key="frame" x="20" y="439" width="390" height="390"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="egc-8S-QgD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Game" id="FRp-TL-qAH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DaD-Rq-kOX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2933.0232558139533" y="2.5751072961373391"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o1d-WK-1tp">
@@ -121,6 +149,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="red_grid" width="80" height="80"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
