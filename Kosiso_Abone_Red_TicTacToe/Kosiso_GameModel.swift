@@ -39,9 +39,9 @@ class Kosiso_GameModel {
         }
       
         for winningCombo in winningCombinations{
-//            let index1 = winningCombo[0]
-//            let index2 = winningCombo[1]
-//            let index3 = winningCombo[2]
+            let index1 = winningCombo[0]
+            let index2 = winningCombo[1]
+            let index3 = winningCombo[2]
             
             if(squareContents[index1] == lastPlayed
                && squareContents[index2] == lastPlayed
