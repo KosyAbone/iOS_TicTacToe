@@ -10,6 +10,7 @@
 		0B8B8C952A4F3C43004E7536 /* Kosiso_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B8C942A4F3C43004E7536 /* Kosiso_TableViewController.swift */; };
 		0B8B8C972A4F3DD3004E7536 /* Kosiso_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B8C962A4F3DD2004E7536 /* Kosiso_TableViewCell.swift */; };
 		0B8B8C992A4F49C6004E7536 /* Kosiso_GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B8C982A4F49C6004E7536 /* Kosiso_GameModel.swift */; };
+		0B8B8C9B2A4F51D6004E7536 /* Kosiso_GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B8C9A2A4F51D6004E7536 /* Kosiso_GameViewController.swift */; };
 		0BB56D4B2A4E6EDC008AFCE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB56D4A2A4E6EDC008AFCE5 /* AppDelegate.swift */; };
 		0BB56D4D2A4E6EDC008AFCE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB56D4C2A4E6EDC008AFCE5 /* SceneDelegate.swift */; };
 		0BB56D4F2A4E6EDC008AFCE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB56D4E2A4E6EDC008AFCE5 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		0B8B8C942A4F3C43004E7536 /* Kosiso_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kosiso_TableViewController.swift; sourceTree = "<group>"; };
 		0B8B8C962A4F3DD2004E7536 /* Kosiso_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kosiso_TableViewCell.swift; sourceTree = "<group>"; };
 		0B8B8C982A4F49C6004E7536 /* Kosiso_GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kosiso_GameModel.swift; sourceTree = "<group>"; };
+		0B8B8C9A2A4F51D6004E7536 /* Kosiso_GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kosiso_GameViewController.swift; sourceTree = "<group>"; };
 		0BB56D472A4E6EDC008AFCE5 /* Kosiso_Abone_Red_TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kosiso_Abone_Red_TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB56D4A2A4E6EDC008AFCE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BB56D4C2A4E6EDC008AFCE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				0B8B8C942A4F3C43004E7536 /* Kosiso_TableViewController.swift */,
 				0B8B8C962A4F3DD2004E7536 /* Kosiso_TableViewCell.swift */,
 				0B8B8C982A4F49C6004E7536 /* Kosiso_GameModel.swift */,
+				0B8B8C9A2A4F51D6004E7536 /* Kosiso_GameViewController.swift */,
 			);
 			path = Kosiso_Abone_Red_TicTacToe;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				0B8B8C952A4F3C43004E7536 /* Kosiso_TableViewController.swift in Sources */,
 				0B8B8C992A4F49C6004E7536 /* Kosiso_GameModel.swift in Sources */,
 				0BB56D4D2A4E6EDC008AFCE5 /* SceneDelegate.swift in Sources */,
+				0B8B8C9B2A4F51D6004E7536 /* Kosiso_GameViewController.swift in Sources */,
 				0B8B8C972A4F3DD3004E7536 /* Kosiso_TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
