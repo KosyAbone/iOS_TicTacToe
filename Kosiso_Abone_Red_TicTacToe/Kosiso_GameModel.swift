@@ -15,6 +15,8 @@ class Kosiso_GameModel {
     var squareContents = Array(repeating: "", count: 10);
     var noOfMovesPlayed = 0
     
+    var orderOfMoves = [Int]()
+    
     let winningCombinations = [
         [1, 2, 3],
         [4, 5, 6],
@@ -27,6 +29,7 @@ class Kosiso_GameModel {
     ]
     
     func playMove(tag: Int){
+        orderOfMoves.append(tag)
         squareContents[tag] = whoseTurn;
         lastPlayed = whoseTurn;
         whoseTurn = whoseTurn == "X" ? "O" : "X"
@@ -48,15 +51,44 @@ class Kosiso_GameModel {
                && squareContents[index3] == lastPlayed){
                 
                 whoWon = lastPlayed;
+                saveGame();
                 return true
             }
         }
         
         if(noOfMovesPlayed == 9){
+            saveGame();
             return true
         }
 
         return false
     }
     
+    func saveGame(){
+        let numGamesPlayed = UserDefaults.standard.integer(forKey: Constants.NUM_GAMES)
+        let gameNumber = numGamesPlayed + 1
+        
+        UserDefaults.standard.set(whoWon, forKey: Constants.WHO_WON + String(gameNumber))
+        
+        UserDefaults.standard.set(Date(), forKey: Constants.DATE_TIME + String(gameNumber))
+        
+        UserDefaults.standard.set(orderOfMoves, forKey: Constants.ORDER_OF_MOVES + String(gameNumber))
+        
+        UserDefaults.standard.set(numGamesPlayed, forKey: Constants.NUM_GAMES)
+        
+        print("game saved")
+        
+//        print(UserDefaults.standard.integer(forKey: Constants.NUM_GAMES))
+//        print(UserDefaults.standard.string(forKey: Constants.WHO_WON)!)
+//        print(UserDefaults.standard.object(forKey: Constants.DATE_TIME)!)
+//        print(UserDefaults.standard.array(forKey: Constants.ORDER_OF_MOVES)!)
+    }
+    
+}
+
+struct Constants {
+    static let NUM_GAMES = "numberOfGamesPlayed"
+    static let WHO_WON = "whoWon"
+    static let DATE_TIME = "dateTime"
+    static let ORDER_OF_MOVES = "orderOfMoves"
 }
