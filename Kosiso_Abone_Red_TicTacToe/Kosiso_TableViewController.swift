@@ -58,7 +58,15 @@ class Kosiso_TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "kosiso_tablecell", for: indexPath) as! Kosiso_TableViewCell
 
         // Configure the cell...
-        cell.whoWon.text = "Kosy Won"
+        
+        let rowNumber = indexPath.row
+        let thisRowData = gameDataArray[rowNumber]
+        
+        if(thisRowData.whoWon == ""){
+            cell.whoWon.text = "Draw!";
+        } else{
+            cell.whoWon.text = thisRowData.whoWon + " Won"
+        }
         cell.dateTimeLabel.text = "Today"
     
         return cell
