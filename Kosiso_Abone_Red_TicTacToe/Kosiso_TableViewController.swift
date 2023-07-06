@@ -67,7 +67,14 @@ class Kosiso_TableViewController: UITableViewController {
         } else{
             cell.whoWon.text = thisRowData.whoWon + " Won"
         }
-        cell.dateTimeLabel.text = "Today"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+         
+        dateFormatter.locale = Locale(identifier: "en_US")
+        
+        cell.dateTimeLabel.text = dateFormatter.string(from: thisRowData.dateTime)
     
         return cell
     }
