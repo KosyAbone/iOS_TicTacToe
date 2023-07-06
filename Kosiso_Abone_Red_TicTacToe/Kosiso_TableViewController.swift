@@ -8,9 +8,13 @@
 import UIKit
 
 class Kosiso_TableViewController: UITableViewController {
+    
+    var gameDataArray = [GameData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadData();
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -20,6 +24,24 @@ class Kosiso_TableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    func loadData(){
+        let numOfGamesPlayed = UserDefaults.standard.integer(forKey: Constants.NUM_GAMES)
+        
+        for i in (0..<numOfGamesPlayed){
+            let gameNumber = i + 1;
+            
+            let whoWonThisGame = UserDefaults.standard.string(forKey: Constants.WHO_WON + String(gameNumber))!
+            
+            let dateTimeThisGame = UserDefaults.standard.object(forKey: Constants.DATE_TIME + String(gameNumber)) as! Date
+            
+            let orderOfMovesThisGame = UserDefaults.standard.array(forKey: Constants.ORDER_OF_MOVES + String(gameNumber)) as! [Int]
+            
+            let thisGameData = GameData(whoWon: whoWonThisGame, dateTime: dateTimeThisGame, orderOfMoves: orderOfMovesThisGame)
+            
+            gameDataArray.append(thisGameData)
+        }
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -28,7 +50,7 @@ class Kosiso_TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return UserDefaults.standard.integer(forKey: Constants.NUM_GAMES)
     }
 
 
@@ -88,4 +110,10 @@ class Kosiso_TableViewController: UITableViewController {
     }
     */
 
+}
+
+struct GameData{
+    var whoWon: String
+    var dateTime: Date
+    var orderOfMoves: [Int]
 }

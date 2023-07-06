@@ -74,7 +74,7 @@ class Kosiso_GameModel {
         
         UserDefaults.standard.set(orderOfMoves, forKey: Constants.ORDER_OF_MOVES + String(gameNumber))
         
-        UserDefaults.standard.set(numGamesPlayed, forKey: Constants.NUM_GAMES)
+        UserDefaults.standard.set(gameNumber, forKey: Constants.NUM_GAMES)
         
         print("game saved")
         
