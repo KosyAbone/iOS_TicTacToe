@@ -25,6 +25,12 @@ class Kosiso_TableViewController: UITableViewController {
 
     // MARK: - Table view data source
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadData()
+        tableView.reloadData()
+    }
     func loadData(){
         let numOfGamesPlayed = UserDefaults.standard.integer(forKey: Constants.NUM_GAMES)
         
@@ -66,6 +72,12 @@ class Kosiso_TableViewController: UITableViewController {
             cell.whoWon.text = "Draw!";
         } else{
             cell.whoWon.text = thisRowData.whoWon + " Won"
+        }
+        
+        if(thisRowData.whoWon == "X"){
+            cell.winLossImage.image = UIImage(named: "red_win")
+        } else {
+            cell.winLossImage.image = UIImage(named: "red_loss")
         }
         
         let dateFormatter = DateFormatter()
@@ -115,15 +127,21 @@ class Kosiso_TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+    let identifier = segue.identifier
+        
+        if(identifier == "newGame"){
+            return
+        }
+        
     }
-    */
 
 }
 
